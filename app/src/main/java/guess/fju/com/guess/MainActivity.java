@@ -14,13 +14,13 @@ public class MainActivity extends AppCompatActivity {
     Random ran = new Random();
     int r = ran.nextInt(9)+1;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button bSend = (Button) findViewById(R.id.b_send);
 
         bSend.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View view) { EditText edNumber = (EditText)findViewById(R.id.ed_number);
                 int n = Integer.parseInt(edNumber.getText().toString());
                 if(n<r){
